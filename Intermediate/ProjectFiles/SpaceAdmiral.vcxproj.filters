@@ -1,70 +1,90 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\SpaceAdmiral.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{88DC7128-7D91-4D6E-BCEB-5A1F9E4FAD56}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\SpaceAdmiral.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\SpaceAdmiralEditor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{FDBB3DA2-DD89-428D-8EB6-632C94717F09}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultInput.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\SpaceAdmiral">
-			<UniqueIdentifier>{C8FB0A95-0E0F-4F04-82F6-F12D03DDD45A}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\SpaceAdmiral\SpaceAdmiral.Build.cs">
-			<Filter>Source\SpaceAdmiral</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\SpaceAdmiral\SpaceAdmiral.cpp">
-			<Filter>Source\SpaceAdmiral</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\SpaceAdmiral\SpaceAdmiral.h">
-			<Filter>Source\SpaceAdmiral</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\SpaceAdmiral\SpaceAdmiralCharacter.cpp">
-			<Filter>Source\SpaceAdmiral</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\SpaceAdmiral\SpaceAdmiralCharacter.h">
-			<Filter>Source\SpaceAdmiral</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\SpaceAdmiral\SpaceAdmiralGameMode.cpp">
-			<Filter>Source\SpaceAdmiral</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\SpaceAdmiral\SpaceAdmiralGameMode.h">
-			<Filter>Source\SpaceAdmiral</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\SpaceAdmiral\SpaceAdmiralHUD.cpp">
-			<Filter>Source\SpaceAdmiral</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\SpaceAdmiral\SpaceAdmiralHUD.h">
-			<Filter>Source\SpaceAdmiral</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\SpaceAdmiral\SpaceAdmiralProjectile.cpp">
-			<Filter>Source\SpaceAdmiral</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\SpaceAdmiral\SpaceAdmiralProjectile.h">
-			<Filter>Source\SpaceAdmiral</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\SpaceAdmiral.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{88DC7128-7D91-4D6E-BCEB-5A1F9E4FAD56}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SpaceAdmiral.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SpaceAdmiralEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FDBB3DA2-DD89-428D-8EB6-632C94717F09}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\SpaceAdmiral">
+      <UniqueIdentifier>{C8FB0A95-0E0F-4F04-82F6-F12D03DDD45A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SpaceAdmiral\SpaceAdmiral.Build.cs">
+      <Filter>Source\SpaceAdmiral</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SpaceAdmiral\SpaceAdmiral.cpp">
+      <Filter>Source\SpaceAdmiral</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpaceAdmiral\SpaceAdmiral.h">
+      <Filter>Source\SpaceAdmiral</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SpaceAdmiral\SpaceAdmiralCharacter.cpp">
+      <Filter>Source\SpaceAdmiral</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpaceAdmiral\SpaceAdmiralCharacter.h">
+      <Filter>Source\SpaceAdmiral</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SpaceAdmiral\SpaceAdmiralGameMode.cpp">
+      <Filter>Source\SpaceAdmiral</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpaceAdmiral\SpaceAdmiralGameMode.h">
+      <Filter>Source\SpaceAdmiral</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SpaceAdmiral\SpaceAdmiralHUD.cpp">
+      <Filter>Source\SpaceAdmiral</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpaceAdmiral\SpaceAdmiralHUD.h">
+      <Filter>Source\SpaceAdmiral</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SpaceAdmiral\SpaceAdmiralProjectile.cpp">
+      <Filter>Source\SpaceAdmiral</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SpaceAdmiral\SpaceAdmiralProjectile.h">
+      <Filter>Source\SpaceAdmiral</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\SpaceAdmiral\Data">
+      <UniqueIdentifier>{24d6f438-91b9-4bf1-9a4c-9658c9c4daa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SpaceAdmiral\Data\Pawn">
+      <UniqueIdentifier>{9eb801d4-a9bb-47cf-b3b2-5b8b564bbf2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\SpaceAdmiral\Data\Pawn\Components">
+      <UniqueIdentifier>{a6f87f7f-a07c-474a-bd10-f26aac705a42}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\SpaceAdmiral\Data\Pawn\Components\HealthComponent.h">
+      <Filter>Source\SpaceAdmiral\Data\Pawn\Components</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\SpaceAdmiral\Data\Pawn\Components\HealthComponent.cpp">
+      <Filter>Source\SpaceAdmiral\Data\Pawn\Components</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

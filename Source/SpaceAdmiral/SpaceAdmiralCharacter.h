@@ -1,7 +1,9 @@
 // Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
 #pragma once
 #include "GameFramework/Character.h"
+#include "Data/Pawn/Components/HealthComponent.h"
 #include "SpaceAdmiralCharacter.generated.h"
+
 
 class UInputComponent;
 
@@ -22,6 +24,10 @@ class ASpaceAdmiralCharacter : public ACharacter
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 	class USceneComponent* FP_MuzzleLocation;
 
+	/* HP компонент тестовый*/
+	UPROPERTY(VisibleDefaultsOnly, Category = Health)
+	class UHealthComponent *HealthComponent;
+
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FirstPersonCameraComponent;
@@ -29,6 +35,15 @@ public:
 	ASpaceAdmiralCharacter();
 
 	virtual void BeginPlay();
+	/*функция смерти.
+	завязана на диспатч*/
+	UFUNCTION(BlueprintNativeEvent)
+	void Death();
+	void Death_Implementation();
+
+	/*переменная показывающая, живой ли персонаж*/
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Health)
+	bool BDeath;
 
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)

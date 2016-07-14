@@ -5,6 +5,7 @@
 #include "SpaceAdmiralProjectile.h"
 #include "Animation/AnimInstance.h"
 #include "GameFramework/InputSettings.h"
+#include "Engine.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -51,6 +52,12 @@ ASpaceAdmiralCharacter::ASpaceAdmiralCharacter()
 
 	// Note: The ProjectileClass and the skeletal mesh/anim blueprints for Mesh1P are set in the
 	// derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+
+	/* HP компонент тестовый*/
+	/* */
+	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("HealthComponent"));
+	HealthComponent->DDeath.AddUFunction(this, "Death");
+	BDeath = false;
 }
 
 void ASpaceAdmiralCharacter::BeginPlay()
@@ -227,4 +234,16 @@ bool ASpaceAdmiralCharacter::EnableTouchscreenMovement(class UInputComponent* In
 		InputComponent->BindTouch(EInputEvent::IE_Repeat, this, &ASpaceAdmiralCharacter::TouchUpdate);
 	}
 	return bResult;
+}
+
+void ASpaceAdmiralCharacter::Death_Implementation()
+{
+	BDeath = true;
+
+	/*отключение управления*/
+	ASpaceAdmiralCharacter::DisableInput(GetWorld()->GetFirstPlayerController() );
+	
+	
+
+	GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Red, TEXT("Dead!!!"));
 }
