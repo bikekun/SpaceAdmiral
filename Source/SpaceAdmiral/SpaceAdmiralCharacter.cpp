@@ -242,8 +242,14 @@ void ASpaceAdmiralCharacter::Death_Implementation()
 
 	/*отключение управления*/
 	ASpaceAdmiralCharacter::DisableInput(GetWorld()->GetFirstPlayerController() );
-	
-	
+
+	//GetCapsuleComponent()->SetSimulatePhysics(true);
+	//GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	Mesh1P->SetSimulatePhysics(true);
+	Mesh1P->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	//FirstPersonCameraComponent->SetRelativeLocation(FVector(0.0f, 0.0f, 10.0f), true, nullptr, ETeleportType::None);
+	//FirstPersonCameraComponent->RelativeLocation = FVector(0.0f, 0.0f, 20.f);
+	//FirstPersonCameraComponent->RelativeRotation = FRotator(FMath::RandRange(0, 90), FMath::RandRange(0, 90), FMath::RandRange(0, 90));
 
 	GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Red, TEXT("Dead!!!"));
 }
