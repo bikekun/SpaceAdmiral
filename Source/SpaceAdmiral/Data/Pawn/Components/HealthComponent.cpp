@@ -54,7 +54,7 @@ bool UHealthComponent::AddHealth(float value)
 	return true;
 }
 
-bool UHealthComponent::TakeHealth(float damage)
+bool UHealthComponent::TakeDamage(float damage)
 {
 	if (!(AddHealth(-1 * damage))) return false;
 	return true;

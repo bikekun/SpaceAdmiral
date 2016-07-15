@@ -36,7 +36,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Health)
 	bool AddHealth(float value);
 	UFUNCTION(BlueprintCallable, Category = Health)
-	bool TakeHealth(float damage);
+	bool TakeDamage(float damage);
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Health)
 	float BeginHealth;

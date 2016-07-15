@@ -253,3 +253,20 @@ void ASpaceAdmiralCharacter::Death_Implementation()
 
 	GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Red, TEXT("Dead!!!"));
 }
+
+float ASpaceAdmiralCharacter::TakeDamage(float Damage, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, class AActor* DamageCauser)
+{
+	// Call the base class - this will tell us how much damage to apply  
+	const float ActualDamage = Super::TakeDamage(Damage, DamageEvent, EventInstigator, DamageCauser);
+	if (ActualDamage > 0.f)
+	{
+		HealthComponent->TakeDamage(ActualDamage);
+		// If the damage depletes our health set our lifespan to zero - which will destroy the actor  
+		if (BDeath)
+		{
+			SetLifeSpan(0.001f);
+		}
+	}
+
+	return ActualDamage;
+}

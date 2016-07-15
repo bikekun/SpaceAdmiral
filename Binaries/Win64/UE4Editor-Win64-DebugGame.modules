@@ -1,8 +1,8 @@
 {
 	"Changelist" : 3039270,
-	"BuildId" : "71bf6ee5-5e64-41b0-88b4-1de51bd9dbe5",
+	"BuildId" : "5dfd0656-940f-4294-8e74-e4d203cef22c",
 	"Modules" : 
 	{
-		"SpaceAdmiral" : "UE4Editor-SpaceAdmiral-3092-Win64-DebugGame.dll"
+		"SpaceAdmiral" : "UE4Editor-SpaceAdmiral-Win64-DebugGame.dll"
 	}
 }
