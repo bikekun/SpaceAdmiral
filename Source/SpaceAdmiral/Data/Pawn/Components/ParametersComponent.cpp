@@ -3,12 +3,19 @@
 #include "SpaceAdmiral.h"
 #include "ParametersComponent.h"
 
+
+
 UParametersComponent::UParametersComponent()
 {
 	/*default*/
 	Level = 1;
 	Experience = 0;
 	Statima = MaxStatima = 100;
+
+	ReStatima = 10;
+	TimeRestoreStatime = 1;
+	IsRestoreStatima = true;
+
 	Thirst = 0;
 	MaxThirst = 100;
 	Hunger = 0;
@@ -65,15 +72,43 @@ void UParametersComponent::CalculateExperienceTheNextLvl()
 	ExperienceTheNextLvl = ExperienceTheNextLvl + (Level * Level * 100);
 }
 
+bool UParametersComponent::CheckStatima()
+{
+	if (Statima < MaxStatima && IsRestoreStatima)
+	{
+		return true;
+	}
+
+	return false;
+}
+
+
+
 
 bool UParametersComponent::ChangeStatima(int32 Value)
 {
 	Statima = CalculateValue(Statima, Value, 0, MaxStatima);
 
+	if (CheckStatima() )
+	{
+		//getworldrimermanager
+		GetWorld()->GetTimerManager().SetTimer(CountupTimerStatima, this, &UParametersComponent::RestoreStatima, TimeRestoreStatime, true);
+	}
+
 	if (Statima <= 0)
 		return true;
 
 	return false;
+}
+
+void UParametersComponent::RestoreStatima()
+{
+	ChangeStatima(ReStatima);
+
+	if (Statima >= MaxStatima)
+	{
+		GetWorld()->GetTimerManager().ClearTimer(CountupTimerStatima);
+	}
 }
 
 bool UParametersComponent::ChangeThirst(int32 Value)

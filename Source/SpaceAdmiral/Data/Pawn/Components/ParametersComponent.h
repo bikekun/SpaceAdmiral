@@ -35,6 +35,18 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Parameters)
 	int32 MaxStatima;
 
+	/*how mach Statima restore*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Parameters)
+	int32 ReStatima;
+
+	/*how mach time of Statima restore*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Parameters)
+	float TimeRestoreStatime;
+
+	/*is Statima restore?*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Parameters)
+	bool IsRestoreStatima;
+
 	/*My  Thirst*/
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Parameters)
 	int32 Thirst;
@@ -77,6 +89,11 @@ private:
 
 	bool CheckNewLevel();
 	void CalculateExperienceTheNextLvl();
+
+	FTimerHandle CountupTimerStatima;
+
+	bool CheckStatima();
+	void RestoreStatima();
 
 public:
 	/*constructor*/
