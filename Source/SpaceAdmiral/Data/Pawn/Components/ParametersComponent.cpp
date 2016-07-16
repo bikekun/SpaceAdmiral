@@ -11,6 +11,8 @@ UParametersComponent::UParametersComponent()
 	Statima = MaxStatima = 100;
 	Thirst = 0;
 	MaxThirst = 100;
+	Hunger = 0;
+	MaxHunger = 100;
 
 	CalculateExperienceTheNextLvl();
 
@@ -63,9 +65,9 @@ void UParametersComponent::CalculateExperienceTheNextLvl()
 	ExperienceTheNextLvl = ExperienceTheNextLvl + (Level * Level * 100);
 }
 
-bool UParametersComponent::ÑhangeStatima(int32 Value)
-{	
 
+bool UParametersComponent::ChangeStatima(int32 Value)
+{
 	Statima = CalculateValue(Statima, Value, 0, MaxStatima);
 
 	if (Statima <= 0)
@@ -74,7 +76,7 @@ bool UParametersComponent::ÑhangeStatima(int32 Value)
 	return false;
 }
 
-bool UParametersComponent::ÑhangeThirst(int32 Value)
+bool UParametersComponent::ChangeThirst(int32 Value)
 {
 	Thirst = CalculateValue(Thirst, Value, 0, MaxThirst);
 
@@ -82,4 +84,14 @@ bool UParametersComponent::ÑhangeThirst(int32 Value)
 		return false;
 
 	return true;
+}
+
+bool UParametersComponent::ChangeHunger(int32 Value)
+{
+	Hunger = CalculateValue(Hunger, Value, 0, MaxHunger);
+
+	if (Hunger >= MaxHunger)
+		return false;
+
+	return false;
 }

@@ -43,7 +43,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Parameters)
 	int32 MaxThirst;
 	
+	/*My  Hunger*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Parameters)
+	int32 Hunger;
 
+	/*My  max Hunger*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Parameters)
+	int32 MaxHunger;
 	
 	
 
@@ -55,13 +61,17 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Parameters)
 	void LevelUp(int32 Value);
 
-	/*change Statima of Value*/
-	/*UFUNCTION(BlueprintCallable, Category = Parameters)*/
-	bool ÑhangeStatima(int32 Value);
+	/*Change Statima*/
+	UFUNCTION(BlueprintCallable, Category = Parameters)
+	bool ChangeStatima(int32 Value);
 
-	/*change Statima of Value*/
-//	UFUNCTION()
-	bool ÑhangeThirst(int32 Value);
+	/*change thirst*/
+	UFUNCTION(BlueprintCallable, Category = Parameters)
+	bool ChangeThirst(int32 Value);
+
+	/*change Hunger*/
+	UFUNCTION(BlueprintCallable, Category = Parameters)
+	bool ChangeHunger(int32 Value);
 
 private:
 
@@ -99,6 +109,14 @@ public:
 	/*Get my max Thirst*/
 	UFUNCTION(BlueprintPure, Category = Parameters)
 	int32 GetMaxThirst() { return MaxThirst; }
+
+	/*Get my Hunger*/
+	UFUNCTION(BlueprintPure, Category = Parameters)
+	int32 GetHunger() { return Hunger; }
+
+	/*Get my max Hunger*/
+	UFUNCTION(BlueprintPure, Category = Parameters)
+	int32 GetMaxHunger() { return MaxHunger; }
 	
 	
 };
