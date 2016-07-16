@@ -27,7 +27,41 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Parameters)
 	int32 ExperienceTheNextLvl;
 
+	/*My statima*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Parameters)
+	int32 Statima;
+
+	/*My max statima*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Parameters)
+	int32 MaxStatima;
+
+	/*My  Thirst*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Parameters)
+	int32 Thirst;
+
+	/*My  maxThirst*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Parameters)
+	int32 MaxThirst;
 	
+
+	
+	
+
+	/*add Experience and Check New Level. If LevelUp return true*/
+	UFUNCTION(BlueprintCallable, Category = Parameters)
+	bool AddExperience(int32 vExperience);
+
+	/*Level up of value*/
+	UFUNCTION(BlueprintCallable, Category = Parameters)
+	void LevelUp(int32 Value);
+
+	/*change Statima of Value*/
+	/*UFUNCTION(BlueprintCallable, Category = Parameters)*/
+	bool ÑhangeStatima(int32 Value);
+
+	/*change Statima of Value*/
+//	UFUNCTION()
+	bool ÑhangeThirst(int32 Value);
 
 private:
 
@@ -50,13 +84,21 @@ public:
 	UFUNCTION(BlueprintPure, Category = Parameters)
 	int32 GetExperienceTheNextLvl() { return ExperienceTheNextLvl; }
 
-	/*add Experience and Check New Level. If LevelUp return true*/
-	UFUNCTION(BlueprintCallable, Category = Parameters)
-	bool AddExperience(int32 vExperience);
+	/*Get my Statima*/
+	UFUNCTION(BlueprintPure, Category = Parameters)
+	int32 GetStatima() { return Statima; }
 
-	/*Level up of value*/
-	UFUNCTION(BlueprintCallable, Category = Parameters)
-	void LevelUp(int32 Value);
+	/*Get my max Statima*/
+	UFUNCTION(BlueprintPure, Category = Parameters)
+	int32 GetMaxStatima() { return MaxStatima; }
+
+	/*Get my Thirst*/
+	UFUNCTION(BlueprintPure, Category = Parameters)
+	int32 GetThirst() { return Thirst; }
+
+	/*Get my max Thirst*/
+	UFUNCTION(BlueprintPure, Category = Parameters)
+	int32 GetMaxThirst() { return MaxThirst; }
 	
 	
 };
