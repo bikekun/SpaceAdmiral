@@ -44,10 +44,7 @@ void UHealthComponent::BeginPlay()
 
 bool UHealthComponent::AddHealth(float value)
 {
-	Health += value;
-
-	Health = FMath::Min(Health, MaxHealth);
-	Health = FMath::Max(0.0f, Health);
+	Health = CalculateValue(Health, value, 0, MaxHealth);
 
 	if (!(CheckHealth() )) return false;	
 
@@ -58,4 +55,14 @@ bool UHealthComponent::TakeDamage(float damage)
 {
 	if (!(AddHealth(-1 * damage))) return false;
 	return true;
+}
+
+float UHealthComponent::CalculateValue(float Value, float addValue, float minValue, float maxValue)
+{
+	Value += addValue;
+
+	Value = FMath::Min(Value, maxValue);
+	Value = FMath::Max(minValue, Value);
+
+	return Value;
 }

@@ -1,7 +1,7 @@
 // Copyright 1998-2016 Epic Games, Inc. All Rights Reserved.
 #pragma once
 #include "GameFramework/Character.h"
-#include "Data/Pawn/Components/HealthComponent.h"
+#include "Data/Pawn/Components/ParametersComponent.h"
 #include "SpaceAdmiralCharacter.generated.h"
 
 
@@ -26,7 +26,7 @@ class ASpaceAdmiralCharacter : public ACharacter
 
 	/* HP компонент тестовый*/
 	UPROPERTY(VisibleDefaultsOnly, Category = Health)
-	class UHealthComponent *HealthComponent;
+	class UParametersComponent *HealthComponent;
 
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))

@@ -416,8 +416,10 @@
     <None Include="..\..\Config\DefaultInput.ini" />
     <None Include="..\..\Source\SpaceAdmiral\SpaceAdmiral.Build.cs" />
     <ClCompile Include="..\..\Source\SpaceAdmiral\Data\Pawn\Components\HealthComponent.cpp" />
+    <ClCompile Include="..\..\Source\SpaceAdmiral\Data\Pawn\Components\ParametersComponent.cpp" />
     <ClCompile Include="..\..\Source\SpaceAdmiral\SpaceAdmiral.cpp" />
     <ClInclude Include="..\..\Source\SpaceAdmiral\Data\Pawn\Components\HealthComponent.h" />
+    <ClInclude Include="..\..\Source\SpaceAdmiral\Data\Pawn\Components\ParametersComponent.h" />
     <ClInclude Include="..\..\Source\SpaceAdmiral\SpaceAdmiral.h" />
     <ClCompile Include="..\..\Source\SpaceAdmiral\SpaceAdmiralCharacter.cpp" />
     <ClInclude Include="..\..\Source\SpaceAdmiral\SpaceAdmiralCharacter.h" />

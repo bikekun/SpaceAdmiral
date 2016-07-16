@@ -81,9 +81,15 @@
     <ClInclude Include="..\..\Source\SpaceAdmiral\Data\Pawn\Components\HealthComponent.h">
       <Filter>Source\SpaceAdmiral\Data\Pawn\Components</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\SpaceAdmiral\Data\Pawn\Components\ParametersComponent.h">
+      <Filter>Source\SpaceAdmiral\Data\Pawn\Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\SpaceAdmiral\Data\Pawn\Components\HealthComponent.cpp">
+      <Filter>Source\SpaceAdmiral\Data\Pawn\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SpaceAdmiral\Data\Pawn\Components\ParametersComponent.cpp">
       <Filter>Source\SpaceAdmiral\Data\Pawn\Components</Filter>
     </ClCompile>
   </ItemGroup>

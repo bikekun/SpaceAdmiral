@@ -19,6 +19,8 @@ private:
 	float Health;	
 	float MaxHealth;
 
+	
+
 	bool CheckHealth() { if (Health <= 0) { DDeath.Broadcast(); return false; } else return true;
 	
 };
@@ -27,6 +29,8 @@ private:
 public:	
 	// Sets default values for this component's properties
 	UHealthComponent();
+
+	float CalculateValue(float Value, float addValue, float minValue, float maxValue);
 
 	UFUNCTION(BlueprintPure, Category = Health)
 	float GetHealth() { return Health; }

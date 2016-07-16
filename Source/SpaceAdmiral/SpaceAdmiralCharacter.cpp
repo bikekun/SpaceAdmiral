@@ -55,7 +55,7 @@ ASpaceAdmiralCharacter::ASpaceAdmiralCharacter()
 
 	/* HP компонент тестовый*/
 	/* */
-	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("HealthComponent"));
+	HealthComponent = CreateDefaultSubobject<UParametersComponent>(TEXT("HealthComponent"));
 	HealthComponent->DDeath.AddUFunction(this, "Death");
 	BDeath = false;
 }
